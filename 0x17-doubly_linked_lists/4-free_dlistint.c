@@ -4,7 +4,7 @@
 
 /**
  * free_dlistint - check the code
- *
+ * @head: pointer head
  * Return: Always EXIT_SUCCESS.
  */
 void free_dlistint(dlistint_t *head)
