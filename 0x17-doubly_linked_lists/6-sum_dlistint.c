@@ -8,13 +8,11 @@
  * Return: the sum
  */
 
-size_t sum_dlistint(dlistint_t *h)
+int sum_dlistint(dlistint_t *h)
 {
         const dlistint_t *temp;
-        unsigned int sum = 0;
+        int sum = 0;
 
-        if (h == NULL)
-                return (0);
         temp = h;
         while (temp != 0)
         {
