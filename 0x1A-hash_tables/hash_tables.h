@@ -1,4 +1,4 @@
-#ifdef HASH_NODE_S
+#ifndef HASH_NODE_S
 #define HASH_NODE_S 
 /**
  * struct hash_node_s - Node of a hash table
