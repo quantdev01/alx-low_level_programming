@@ -10,11 +10,17 @@
  * @value: value to insert
  */
 
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+int hash_table_set(hash_table_t *ht, const char *key, char *value)
 {
-	hash_table_t *temp = ht;
+	unsigned long int index = key_index(key, ht->size);
+	
+	if (ht == NULL)
+		return (0);
 
-	if (key == "")
-		return (NULL);
+	if (ht->array[index] != NULL)
+		/* To handle colision */
+		return (0);
 
+	ht->array[index]->value = value;
+	return (1);
 }
