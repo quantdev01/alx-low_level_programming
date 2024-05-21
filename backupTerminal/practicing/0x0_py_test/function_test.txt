@@ -1,0 +1,11 @@
+This how it works
+
+---This will function is in the function.py file-----
+testing it
+
+::
+	>>> from function import multiply
+	>>> multiply(2, 3)
+	6
+
+now we are done
