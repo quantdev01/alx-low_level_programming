@@ -14,15 +14,22 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, char *value)
 {
-	unsigned long int index = key_index(key, ht->size);
+	unsigned int index = key_index(key, ht->size);
 
+	hash_table_create(ht->size);
 	if (ht == NULL)
 		return (0);
 
 	if (ht->array[index] != NULL)
 		/* To handle colision */
 		return (0);
+	else
+	{
+		ht->array[index]->key = index;
+		ht->array[index]->value = value;
 
-	ht->array[index]->value = value;
-	return (1);
+		/* ht->array[index]->value = value; */
+		return (1);
+	}
+
 }
